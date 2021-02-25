@@ -1,0 +1,22 @@
+{% extends 'app_server/main.html' %}
+
+{% block content %}
+    <h1>Hello World!</h1>
+
+    <div>
+        <form action="" method="GET">
+            {#            {% csrf_token %}#}
+            {{ object_form.as_p }}
+            <h1></h1>
+            <a href="{% url 'home' %}" class="btn btn-success" role="button">Cancel</a>
+            <input type="submit" class="btn btn-primary" value="ok">
+
+        </form>
+
+        {% for i in pdata %}
+            {{ i.ParamValue }}
+            <hr>
+        {% endfor %}
+    </div>
+
+{% endblock %}

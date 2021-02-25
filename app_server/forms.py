@@ -4,10 +4,10 @@ from django.forms import ModelForm
 from .models import *
 
 
-class ObjectFormForms(forms.ModelForm):
+class ObjectForm(forms.ModelForm):
     class Meta:
         model = Object
-        fields = '__all__'
+        fields = ['Handle_1', 'Handle_2', 'Handle_3']
 
 
 class ParamForm(forms.ModelForm):
