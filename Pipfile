@@ -8,6 +8,7 @@ django = "*"
 django-debug-toolbar = "*"
 sqlalchemy = "*"
 pandas = "*"
+django-redis = "*"
 
 [dev-packages]
 
