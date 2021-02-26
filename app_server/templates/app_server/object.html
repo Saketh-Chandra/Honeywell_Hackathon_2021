@@ -1,0 +1,25 @@
+{% extends 'app_server/main.html' %}
+
+{% block content %}
+
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <h1></h1>
+            <a href="{% url 'home' %}" class="btn btn-success" role="button">Cancel</a>
+            <input type="submit" class="btn btn-primary" value="ok">
+        </form>
+    </div>
+    <hr>
+    <br>
+    <div>
+        <p>The object Name is:</p> {{ handles }}
+        <br>
+        <hr>
+        <p>The Handles are:</p> {{ handle_values }}
+        <br>
+        <hr>
+    <p>The ObjectRevision is</p> {{ handles.ObjectRevision }}
+    </div>
+{% endblock %}

@@ -17,6 +17,7 @@ class Object(models.Model):
     def __str__(self):
         return str(self.ObjectName) + str(self.ObjectParent)
 
+
     class Meta:
         unique_together = (('Handle_1', 'Handle_2', 'Handle_3'),)
 
